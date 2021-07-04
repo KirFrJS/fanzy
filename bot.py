@@ -2,11 +2,7 @@ import discord
 from discord.ext import commands
 import json
 
-bot = commands.Bot(command_prefix='/')
-
-@bot.command()
-async def бот(ctx):
-    await ctx.send('в доработке')
+bot = commands.Bot(command_prefix='f!')
 
 @bot.command()
 async def сказать(ctx, *, text):
@@ -20,7 +16,7 @@ async def очистить(ctx, amount=None):
 
 @bot.event
 async def on_ready():
-    activity = discord.Game(name="/помощь | шард #5", type=3)
+    activity = discord.Game(name="f!помощь | шард #5", type=3)
     await bot.change_presence(status=discord.Status.idle, activity=activity)
     print("Bot is ready!")
 
@@ -56,7 +52,7 @@ async def помощь(ctx):
 **Модерирование**
 `забанить`, `выгнать`, `очистить`, `сказать`, `старт`, `стоп`.
 **Утилиты**
-`очистить`, `бот`, `юзер`,`аватар`.
+`очистить`, `юзер`,`аватар`, `почта`.
 **Системные команды**
 `очистить`, `сказать`, `старт`, `стоп`.
 **[Поддержать(Донат)](https://www.donationalerts.com/r/frame11)**''',
@@ -99,7 +95,7 @@ async def кот(ctx):
 async def почта(ctx, member: discord.Member, *, content):
         channel = await member.create_dm()
         await channel.send(content)
-        await ctx.send('<a:679326929895161882:861173648852385793> успешно отправлено пользоваетелю ! ')
+        await ctx.send('<a:679326929895161882:861173648852385793> успешно отправлено пользоваетелю!')
 
 
 token = os.environ.get('BOT_TOKEN')
