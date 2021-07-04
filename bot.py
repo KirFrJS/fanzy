@@ -102,4 +102,6 @@ async def почта(ctx, member: discord.Member, *, content):
         await ctx.send('<a:679326929895161882:861173648852385793> успешно отправлено пользоваетелю ! ')
 
 
-bot.run('ODYxMTcwNTQ4MzU2NTQ2NTkw.YOF5kg.AYzXximGLglNSx5lIubrCFkJ7nc')
+token = os.environ.get('BOT_TOKEN')
+
+bot.run(str(token))
