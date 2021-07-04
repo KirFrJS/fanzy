@@ -1,0 +1,2 @@
+# fanzy
+Fanzy Discord Bot
