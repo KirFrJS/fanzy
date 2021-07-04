@@ -104,4 +104,5 @@ async def почта(ctx, member: discord.Member, *, content):
 
 token = os.environ.get('BOT_TOKEN')
 
-bot.run(str(token))
+bot.run(str(token))discord.py
+
